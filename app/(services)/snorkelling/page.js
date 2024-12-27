@@ -1,5 +1,6 @@
 "use client";
 import Layout from "@/components/layout/Layout";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -44,7 +45,8 @@ const serviceDetails = {
     },
     {
       question: "How long does the snorkeling program last?",
-      answer: "The entire program duration is 60 minutes, including training and activity time.",
+      answer:
+        "The entire program duration is 60 minutes, including training and activity time.",
     },
   ],
   faq: [
@@ -55,7 +57,8 @@ const serviceDetails = {
     },
     {
       question: "What are the prerequisites for snorkeling?",
-      answer: "There are no prerequisites. Anyone can join, regardless of swimming skills or age.",
+      answer:
+        "There are no prerequisites. Anyone can join, regardless of swimming skills or age.",
     },
     {
       question: "What should I bring for the snorkeling activity?",
@@ -83,9 +86,7 @@ const serviceDetails = {
     "Sunglasses & cap for sun protection",
     "Optional: Your own swimwear or clothes (e.g., shorts and t-shirt)",
   ],
-  notes: [
-    "Have a light breakfast like fruits or snacks before the activity.",
-  ],
+  notes: ["Have a light breakfast like fruits or snacks before the activity."],
   cancellationPolicy: [
     "Full refund if the activity is canceled by the center due to weather conditions.",
     "50% of the total amount will be charged if canceled by the client before entering the ocean.",
@@ -99,7 +100,6 @@ const serviceDetails = {
     "Activities are subject to weather conditions. Refunds or alternate dates will be offered for cancellations due to weather.",
   callToAction: "Book SNORKELLING Now",
 };
-
 
 export default function Home() {
   const [isActive, setIsActive] = useState({ status: false, key: 1 });
@@ -184,9 +184,12 @@ export default function Home() {
                   <div className="col-xl-8 col-lg-7">
                     <div className="service-details__top-right">
                       <div className="service-details__img-1">
-                        <img
-                          src={"assets/images/backgrounds/snorkeling.jpg"}
+                        <Image
+                          src="/assets/images/backgrounds/snorkeling.jpg"
                           alt="Service Detail"
+                          width={850}
+                          height={440}
+                          layout="intrusive"
                         />
                       </div>
                       <h3 className="service-details__title-1">
@@ -230,6 +233,180 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              <div
+                className="service-details__bottom"
+                style={{
+                  padding: "20px",
+                  background: "linear-gradient(145deg, #0e0a17, #212529)",
+                  borderRadius: "12px",
+                  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.5)",
+                  margin: "20px 0",
+                  fontFamily: "'Roboto', sans-serif",
+                  color: "#e0e0e0",
+                }}
+              >
+                <h3
+                  className="service-details__title"
+                  style={{
+                    fontSize: "24px",
+                    fontWeight: "700",
+                    color: "#f8f9fa",
+                    marginBottom: "20px",
+                    textAlign: "center",
+                  }}
+                >
+                  Package Inclusions
+                </h3>
+                <div
+                  className="service-details__price"
+                  style={{
+                    marginBottom: "20px",
+                    padding: "15px",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    borderRadius: "8px",
+                    background: "#0e0a17",
+                  }}
+                >
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      color: "#ced4da",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Price Per Person
+                  </h4>
+                  <p
+                    className="price-amount"
+                    style={{
+                      fontSize: "20px",
+                      fontWeight: "bold",
+                      color: "#4caf50",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    {serviceDetails.priceDetails.pricePerPerson}
+                  </p>
+                  <p
+                    className="service-details__duration"
+                    style={{
+                      fontSize: "16px",
+                      color: "#adb5bd",
+                      marginBottom: "4px",
+                    }}
+                  >
+                    Duration: {serviceDetails.priceDetails.duration}
+                  </p>
+                  <p
+                    className="service-details__min-age"
+                    style={{ fontSize: "16px", color: "#adb5bd" }}
+                  >
+                    Min Age: {serviceDetails.priceDetails.minAge}
+                  </p>
+                </div>
+
+                <div
+                  className="service-details__inclusions"
+                  style={{
+                    marginBottom: "20px",
+                    padding: "15px",
+                    background: "#0e0a17",
+                    borderRadius: "8px",
+                  }}
+                >
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      color: "#ced4da",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Package Includes
+                  </h4>
+                  <ul
+                    className="inclusions-list"
+                    style={{
+                      listStyleType: "disc",
+                      paddingLeft: "20px",
+                      color: "#dee2e6",
+                    }}
+                  >
+                    {serviceDetails.packageInclusions.map((item, index) => (
+                      <li key={index} style={{ marginBottom: "6px" }}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div
+                  className="service-details__bring"
+                  style={{
+                    marginBottom: "20px",
+                    padding: "15px",
+                    background: "#0e0a17",
+                    borderRadius: "8px",
+                  }}
+                >
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      color: "#ced4da",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Things to Bring
+                  </h4>
+                  <ul
+                    style={{
+                      listStyleType: "circle",
+                      paddingLeft: "20px",
+                      color: "#dee2e6",
+                    }}
+                  >
+                    {serviceDetails.thingsToBring.map((item, index) => (
+                      <li key={index} style={{ marginBottom: "6px" }}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div
+                  className="service-details__notes"
+                  style={{
+                    padding: "15px",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    borderRadius: "8px",
+                    background: "#0e0a17",
+                  }}
+                >
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      color: "#ced4da",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Important Notes
+                  </h4>
+                  <ul
+                    style={{
+                      listStyleType: "square",
+                      paddingLeft: "20px",
+                      color: "#dee2e6",
+                    }}
+                  >
+                    {serviceDetails.notes.map((item, index) => (
+                      <li key={index} style={{ marginBottom: "6px" }}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
               <div className="service-details__bottom">
                 <div className="row">
                   {/* Services Details */}
@@ -243,78 +420,14 @@ export default function Home() {
                           <a href="#">{item.question}</a>
                         </h3>
                         <p className="service-details__text">{item.answer}</p>
-                        <a href="#" className="service-details__btn">
-                          Read More <span className="icon-arrow-right"></span>
-                        </a>
                       </div>
                     </div>
                   ))}
-                </div>
-                <p className="service-details__text-4">
-                  {serviceDetails.additionalText[1]}
-                </p>
-                <div className="service-details__faq-box">
-                  <h3 className="service-details__faq-title">
-                    Creating Memories One Event at a Time
-                  </h3>
-                  <div
-                    className="accrodion-grp faq-one-accrodion"
-                    data-grp-name="faq-one-accrodion-1"
-                  >
-                    {serviceDetails.faq.map((faq, index) => (
-                      <div
-                        className={`accrodion ${index === 0 ? "active" : ""}`}
-                        key={index}
-                      >
-                        <div
-                          className="accrodion-title"
-                          onClick={() => handleToggle(index)}
-                        >
-                          <h4>{faq.question}</h4>
-                          <div className="faq-one-accrodion__count"></div>
-                        </div>
-                        {isActive.key === index && (
-                          <div className="accrodion-content">
-                            <div className="inner">
-                              <p>{faq.answer}</p>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>
           </section>
           {/* Service Details End */}
-          {/* CTA One Start */}
-          <section className="cta-one">
-            <div className="container">
-              <div className="cta-one__inner">
-                <h3 className="cta-one__title">
-                  Get Latest Updates Subscribe <br /> to Our Newsletter
-                </h3>
-                <form
-                  className="cta-one__form mc-form"
-                  data-url="MC_FORM_URL"
-                  noValidate
-                >
-                  <div className="cta-one__form-input-box">
-                    <input
-                      type="email"
-                      placeholder="Enter your email"
-                      name="EMAIL"
-                    />
-                    <button type="submit" className="cta-one__btn">
-                      <span className="icon-paper-plan"></span>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </section>
-          {/* CTA One End */}
         </div>
       </Layout>
     </>

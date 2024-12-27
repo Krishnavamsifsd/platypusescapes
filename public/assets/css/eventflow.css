@@ -12066,3 +12066,127 @@ ul {
     margin-left: 30px;
   }
 }
+
+
+/* Main Layout Styling */
+.ocean-course-main-container {
+  color: #fefefe;
+  font-family: "Roboto", sans-serif;
+}
+
+.ocean-course-content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 8px;
+}
+
+/* Header Section */
+.ocean-course-header {
+  text-align: center;
+  padding: 40px 20px;
+  background: #000000;
+  color: rgb(255);
+  border-bottom: 0;
+}
+
+.ocean-course-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ocean-course-price-info {
+  font-size: 1.2rem;
+  color: #a9c9ff;
+}
+
+.ocean-course-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+.ocean-course-header-image {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Containers */
+.ocean-course-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.ocean-course-card {
+  background-color: #022850;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  width: 95%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ocean-course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ocean-course-card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.ocean-course-card-text {
+  font-size: 1rem;
+  color: #e0f7ff;
+  line-height: 1.6;
+}
+
+.ocean-course-requirements {
+  list-style-type: circle;
+  margin-left: 20px;
+  color: #a9c9ff;
+}
+
+/* CTA Button */
+.ocean-course-cta-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.ocean-course-cta-button {
+  background-color: #ffd700;
+  color: #002b5c;
+  font-size: 1.3rem;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ocean-course-cta-button:hover {
+  background-color: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .ocean-course-cards-container {
+    flex-direction: column;
+  }
+
+  .ocean-course-card {
+    width: 100%;
+  }
+}

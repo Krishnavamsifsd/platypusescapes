@@ -1,5 +1,6 @@
 "use client";
 import Layout from "@/components/layout/Layout";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -19,55 +20,86 @@ const serviceCategories = [
 ];
 
 const serviceDetails = {
-  title: "Where Every Event Shines Bright",
+  title: "Explore the Ocean with Beginner Scuba (Boat Dive)",
   description:
-    "Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing .Lorem Ipsum is simply dummy text of the printing.Lorem Ipsum is simply dummy text of the printing",
+    "Are you interested to go scuba diving but a bit hesitant because you don’t know swimming? Do you have just half a day and not really interested in taking a certification course? Are you reasonably healthy, with no previous medical problems? If this is more or less you, then come and experience a BOAT DIVE with us. Platypus Escapes invites you, come scuba dive in Vizag and explore the beautiful colourful waters, with wide range of marine life and reef on beautiful dive sites around.",
   images: [
-    "/assets/images/services/service-details-img-1.jpg",
-    "/assets/images/services/service-details-img-box-img-1.jpg",
-    "/assets/images/services/service-details-img-box-img-2.jpg",
+    "/assets/images/services/boat-scuba-main.jpg",
+    "/assets/images/services/boat-scuba-training.jpg",
+    "/assets/images/services/boat-scuba-dive.jpg",
   ],
-  additionalText: ["Experience the Magic of Events"],
+  additionalText: ["Discover the Thrill of Beginner Scuba Diving"],
   description2: [
-    "Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing .Lorem Ipsum is simply dummy text of the printing.Lorem Ipsum is simply dummy text of the printing",
+    "Our trainers (Instructor / Dive Master) will brief you about the equipment and basic techniques, followed by a practice session in shallow waters. After your initiation, you will sail with us to some of the most spectacular and breathtaking dive sites and for those Instagram moments, photographs & videos of your underwater adventures are on us!",
   ],
   description3: [
-    "Real estate is a lucrative industry that involves the buying selling and renting properties It encompasses residential commercial and industrial designsin properties. Real estate agents play a crucial Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing .Lorem Ipsum is simply",
+    "Note: Need more than 3 members for a boat dive. The total duration of the activity is a minimum of 3 hours to a maximum of a full day depending on the chosen package or the number of dives. The maximum safest depth is 12 meters (as per international standards). Participants must be medically fit (contact us before booking if you have any health concerns).",
   ],
   servicecard: [
     {
-      question: "What types of events do you specialize in?",
-      answer:
-        "Events are special occasions where people gather together to celebrate",
+      question: "What is the price for Beginner Scuba (Boat Dive)?",
+      answer: "The price per person is ₹5500 (excluding 18% GST).",
     },
     {
-      question: "How far in advance should I book an event?",
-      answer:
-        "Events are special occasions where people gather together to celebrate",
+      question: "Is swimming required for scuba diving?",
+      answer: "No, swimming skills are not required for this activity.",
     },
     {
-      question: "Do you provide event planning services?",
+      question: "How long does the scuba diving program last?",
       answer:
-        "Events are special occasions where people gather together to celebrate",
+        "The program duration is a minimum of 3 hours, including training and activity time.",
     },
   ],
   faq: [
     {
-      question: "What types of events do you specialize in?",
+      question: "What does the scuba diving package include?",
       answer:
-        "It is a long established fact that a reader will be distracted by the readable content of a page looking at its a layout. The point of using Lorem Ipsum is that it has a more-or-less norIt is a long established fact that a reader will be distracted by the readable content of a page looking at its a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of a letter as opposed to a using 'Content here,",
+        "The package includes all scuba gear, briefing and training, up to 45 minutes of diving, 10 photos & 4 videos, drinking water, and shower facilities.",
     },
     {
-      question: "How far in advance should I book an event?",
+      question: "What are the prerequisites for scuba diving?",
       answer:
-        "It is a long established fact that a reader will be distracted by the readable content of a page looking at its a layout. The point of using Lorem Ipsum is that it has a more-or-less norIt is a long established fact that a reader will be distracted by the readable content of a page looking at its a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of a letter as opposed to a using 'Content here,",
+        "There are no prerequisites. Anyone aged 8 years and above can join, regardless of swimming skills.",
     },
     {
-      question: "Do you provide event planning services?",
+      question: "What should I bring for the scuba diving activity?",
       answer:
-        "It is a long established fact that a reader will be distracted by the readable content of a page looking at its a layout. The point of using Lorem Ipsum is that it has a more-or-less norIt is a long established fact that a reader will be distracted by the readable content of a page looking at its a layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of a letter as opposed to a using 'Content here,",
+        "Bring a towel, an extra pair of clothes, sunglasses, and a cap. You can also bring your own swimwear or use the half wetsuit provided by us.",
     },
   ],
+  priceDetails: {
+    pricePerPerson: "₹5500 (Excluding 18% GST)",
+    duration: "3 hours minimum",
+    minAge: "8+ years",
+  },
+  packageInclusions: [
+    "All scuba gear",
+    "Briefing & Training",
+    "Activity experience (Max. 45 minutes)",
+    "Diving 10 photos & 4 videos",
+    "Drinking water",
+    "Shower facilities",
+  ],
+  thingsToBring: [
+    "Towel",
+    "Extra pair of undergarments and clothes",
+    "Phone or pen-drive to get videos",
+    "Sunglasses & cap for sun protection",
+    "Optional: Your own swimwear or clothes (e.g., shorts and t-shirt)",
+  ],
+  notes: ["Have a light breakfast like fruits or snacks before the activity."],
+  cancellationPolicy: [
+    "Full refund if the activity is canceled by the center due to weather conditions.",
+    "50% of the total amount will be charged if canceled by the client before entering the ocean.",
+    "No refund if the activity is discontinued by the client during training or the experience.",
+  ],
+  equipmentPolicy:
+    "Participants are responsible for the equipment provided. Any loss or damage will be charged.",
+  personalBelongingsPolicy:
+    "The company and its staff are not responsible for the loss or damage of personal belongings.",
+  weatherPolicy:
+    "Activities are subject to weather conditions. Refunds or alternate dates will be offered for cancellations due to weather.",
+  callToAction: "Book Beginner Scuba (Boat Dive) Now",
 };
 
 export default function Home() {
@@ -82,11 +114,7 @@ export default function Home() {
 
   return (
     <>
-      <Layout
-        headerStyle={4}
-        footerStyle={1}
-        breadcrumbTitle="Beginner Scuba (Boat Dive)"
-      >
+      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Snorkelling">
         <div>
           {/* Service Details Start */}
           <section className="service-details">
@@ -134,7 +162,6 @@ export default function Home() {
                           </div>
                           <h4 className="service-details__get-touch-number">
                             <a href="tel:7622893711">+91 76228 93711 </a>
-                            {/* <a href="tel:9434261503">+91 94342 61503 </a> */}
                           </h4>
                         </div>
                       </div>
@@ -158,9 +185,12 @@ export default function Home() {
                   <div className="col-xl-8 col-lg-7">
                     <div className="service-details__top-right">
                       <div className="service-details__img-1">
-                        <img
-                          src={serviceDetails.images[0]}
+                        <Image
+                          src="/assets/images/backgrounds/boatDive.webp"
                           alt="Service Detail"
+                          width={850}
+                          height={440}
+                          layout="responsive"
                         />
                       </div>
                       <h3 className="service-details__title-1">
@@ -204,6 +234,180 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              <div
+                className="service-details__bottom"
+                style={{
+                  padding: "20px",
+                  background: "linear-gradient(145deg, #0e0a17, #212529)",
+                  borderRadius: "12px",
+                  boxShadow: "0 4px 10px rgba(0, 0, 0, 0.5)",
+                  margin: "20px 0",
+                  fontFamily: "'Roboto', sans-serif",
+                  color: "#e0e0e0",
+                }}
+              >
+                <h3
+                  className="service-details__title"
+                  style={{
+                    fontSize: "24px",
+                    fontWeight: "700",
+                    color: "#f8f9fa",
+                    marginBottom: "20px",
+                    textAlign: "center",
+                  }}
+                >
+                  Package Inclusions
+                </h3>
+                <div
+                  className="service-details__price"
+                  style={{
+                    marginBottom: "20px",
+                    padding: "15px",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    borderRadius: "8px",
+                    background: "#0e0a17",
+                  }}
+                >
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      color: "#ced4da",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Price Per Person
+                  </h4>
+                  <p
+                    className="price-amount"
+                    style={{
+                      fontSize: "20px",
+                      fontWeight: "bold",
+                      color: "#4caf50",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    {serviceDetails.priceDetails.pricePerPerson}
+                  </p>
+                  <p
+                    className="service-details__duration"
+                    style={{
+                      fontSize: "16px",
+                      color: "#adb5bd",
+                      marginBottom: "4px",
+                    }}
+                  >
+                    Duration: {serviceDetails.priceDetails.duration}
+                  </p>
+                  <p
+                    className="service-details__min-age"
+                    style={{ fontSize: "16px", color: "#adb5bd" }}
+                  >
+                    Min Age: {serviceDetails.priceDetails.minAge}
+                  </p>
+                </div>
+
+                <div
+                  className="service-details__inclusions"
+                  style={{
+                    marginBottom: "20px",
+                    padding: "15px",
+                    background: "#0e0a17",
+                    borderRadius: "8px",
+                  }}
+                >
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      color: "#ced4da",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Package Includes
+                  </h4>
+                  <ul
+                    className="inclusions-list"
+                    style={{
+                      listStyleType: "disc",
+                      paddingLeft: "20px",
+                      color: "#dee2e6",
+                    }}
+                  >
+                    {serviceDetails.packageInclusions.map((item, index) => (
+                      <li key={index} style={{ marginBottom: "6px" }}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div
+                  className="service-details__bring"
+                  style={{
+                    marginBottom: "20px",
+                    padding: "15px",
+                    background: "#0e0a17",
+                    borderRadius: "8px",
+                  }}
+                >
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      color: "#ced4da",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Things to Bring
+                  </h4>
+                  <ul
+                    style={{
+                      listStyleType: "circle",
+                      paddingLeft: "20px",
+                      color: "#dee2e6",
+                    }}
+                  >
+                    {serviceDetails.thingsToBring.map((item, index) => (
+                      <li key={index} style={{ marginBottom: "6px" }}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div
+                  className="service-details__notes"
+                  style={{
+                    padding: "15px",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    borderRadius: "8px",
+                    background: "#0e0a17",
+                  }}
+                >
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      color: "#ced4da",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Important Notes
+                  </h4>
+                  <ul
+                    style={{
+                      listStyleType: "square",
+                      paddingLeft: "20px",
+                      color: "#dee2e6",
+                    }}
+                  >
+                    {serviceDetails.notes.map((item, index) => (
+                      <li key={index} style={{ marginBottom: "6px" }}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
               <div className="service-details__bottom">
                 <div className="row">
                   {/* Services Details */}
@@ -217,78 +421,14 @@ export default function Home() {
                           <a href="#">{item.question}</a>
                         </h3>
                         <p className="service-details__text">{item.answer}</p>
-                        <a href="#" className="service-details__btn">
-                          Read More <span className="icon-arrow-right"></span>
-                        </a>
                       </div>
                     </div>
                   ))}
-                </div>
-                <p className="service-details__text-4">
-                  {serviceDetails.additionalText[1]}
-                </p>
-                <div className="service-details__faq-box">
-                  <h3 className="service-details__faq-title">
-                    Creating Memories One Event at a Time
-                  </h3>
-                  <div
-                    className="accrodion-grp faq-one-accrodion"
-                    data-grp-name="faq-one-accrodion-1"
-                  >
-                    {serviceDetails.faq.map((faq, index) => (
-                      <div
-                        className={`accrodion ${index === 0 ? "active" : ""}`}
-                        key={index}
-                      >
-                        <div
-                          className="accrodion-title"
-                          onClick={() => handleToggle(index)}
-                        >
-                          <h4>{faq.question}</h4>
-                          <div className="faq-one-accrodion__count"></div>
-                        </div>
-                        {isActive.key === index && (
-                          <div className="accrodion-content">
-                            <div className="inner">
-                              <p>{faq.answer}</p>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>
           </section>
           {/* Service Details End */}
-          {/* CTA One Start */}
-          <section className="cta-one">
-            <div className="container">
-              <div className="cta-one__inner">
-                <h3 className="cta-one__title">
-                  Get Latest Updates Subscribe <br /> to Our Newsletter
-                </h3>
-                <form
-                  className="cta-one__form mc-form"
-                  data-url="MC_FORM_URL"
-                  noValidate
-                >
-                  <div className="cta-one__form-input-box">
-                    <input
-                      type="email"
-                      placeholder="Enter your email"
-                      name="EMAIL"
-                    />
-                    <button type="submit" className="cta-one__btn">
-                      <span className="icon-paper-plan"></span>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </section>
-          {/* CTA One End */}
         </div>
       </Layout>
     </>

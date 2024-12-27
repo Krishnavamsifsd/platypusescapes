@@ -42,21 +42,17 @@ export default function Menu() {
           <li>
             <Link href="/testimonials">Testimonials</Link>
           </li>
-          <li>
-            <Link href="/pricing">Pricing</Link>
-          </li>
+
           <li>
             <Link href="/gallery">Gallery</Link>
           </li>
-          <li>
-            <Link href="/gallery-details">Gallery Details</Link>
-          </li>
+
           <li>
             <Link href="/faq">Faq</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/404">404 Error</Link>
-          </li>
+          </li> */}
         </ul>
       </li>
       <li className="dropdown">
@@ -78,30 +74,30 @@ export default function Menu() {
         </ul>
       </li>
       <li className="dropdown">
-        <Link href="#">Event</Link>
+        <Link href="#">Courses</Link>
         <ul>
           <li>
-            <Link href="/event">Event</Link>
+            <Link href="/ocean-swiming">
+              Open Water (OCEAN) Swimming Course
+            </Link>
           </li>
           <li>
-            <Link href="/event-details">Event Details</Link>
+            <Link href="/open-water-diver">Open Water Scuba Diver</Link>
+          </li>
+          <li>
+            <Link href="/advanced-diver">Advanced diver</Link>
+          </li>
+          <li>
+            <Link href="/emergency-first-aid-response">
+              Emergency First Aid Response
+            </Link>
+          </li>
+          <li>
+            <Link href="/rescue-diver">Rescue diver</Link>
           </li>
         </ul>
       </li>
-      <li className="dropdown">
-        <Link href="#">Blog</Link>
-        <ul>
-          <li>
-            <Link href="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link href="/blog-list">Blog List</Link>
-          </li>
-          <li>
-            <Link href="/blog-details">Blog Details</Link>
-          </li>
-        </ul>
-      </li>
+
       <li>
         <Link href="/contact">Contact</Link>
       </li>
