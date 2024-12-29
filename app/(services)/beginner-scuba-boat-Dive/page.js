@@ -114,7 +114,7 @@ export default function Home() {
 
   return (
     <>
-      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Snorkelling">
+      <Layout headerStyle={4} footerStyle={1} breadcrumbTitle="Beginner Suba (Boat Dive)">
         <div>
           {/* Service Details Start */}
           <section className="service-details">

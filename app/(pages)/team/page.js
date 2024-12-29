@@ -3,48 +3,35 @@ import Link from "next/link";
 
 const teamMembers = [
   {
-    name: "David Beckham",
-    role: "Speaker",
+    name: "Subhash",
+    role: "Founder/Professional Trainer",
     img: "/assets/images/team/team-1-1.jpg",
     description:
-      "Events bring people together for shared experience and celebration. Weddings and birthdays to conferences, festivals, events create memories.",
+      "With years of experience, Subhash ensures every dive is safe, fun, and unforgettable for divers of all skill levels.",
   },
   {
-    name: "David Betman",
-    role: "Singer",
+    name: "Cinderella Christian",
+    role: "Manager/Assistant Dive",
     img: "/assets/images/team/team-1-2.jpg",
     description:
-      "Events bring people together for shared experience and celebration. Weddings and birthdays to conferences, festivals, events create memories.",
+      "Cinderella oversees operations and ensures every diving adventure is seamless and enjoyable for our clients.",
   },
   {
-    name: "Jessica Brown",
-    role: "Content Creator",
-    img: "/assets/images/team/team-1-3.jpg",
+    name: "Sekhar",
+    role: "Manager/Assistant Diver",
+    img: "/assets/images/team/team-1-2.jpg",
     description:
-      "Events bring people together for shared experience and celebration. Weddings and birthdays to conferences, festivals, events create memories.",
+      "Sekhar is passionate about guiding divers through breathtaking underwater journeys and promoting marine conservation.",
   },
   {
-    name: "David Beckham",
-    role: "Speaker",
-    img: "/assets/images/team/team-1-4.jpg",
+    name: "Praveen",
+    role: "Manager/Assistant Dive",
+    img: "/assets/images/team/team-1-2.jpg",
     description:
-      "Events bring people together for shared experience and celebration. Weddings and birthdays to conferences, festivals, events create memories.",
-  },
-  {
-    name: "Alisha Martin",
-    role: "Singer",
-    img: "/assets/images/team/team-1-5.jpg",
-    description:
-      "Events bring people together for shared experience and celebration. Weddings and birthdays to conferences, festivals, events create memories.",
-  },
-  {
-    name: "Herbert Spin",
-    role: "Content Creator",
-    img: "/assets/images/team/team-1-6.jpg",
-    description:
-      "Events bring people together for shared experience and celebration. Weddings and birthdays to conferences, festivals, events create memories.",
+      "Praveen ensures smooth coordination and assists in providing an exceptional diving experience to all clients.",
   },
 ];
+
 export default function Home() {
   return (
     <>

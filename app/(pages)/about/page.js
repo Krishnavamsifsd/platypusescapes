@@ -319,9 +319,12 @@ export default function Home() {
                     className="sliding-text__title"
                   >
                     Explore the Deep
-                    <img
+                    <Image
                       src="/assets/images/icon/star-icon.png"
                       alt="Star Icon"
+                      width={50}
+                      height={50}
+                      priority
                     />
                   </h2>
                 </li>
@@ -331,9 +334,12 @@ export default function Home() {
                     className="sliding-text__title"
                   >
                     Dive into Adventure
-                    <img
+                    <Image
                       src="/assets/images/icon/star-icon.png"
                       alt="Star Icon"
+                      width={50}
+                      height={50}
+                      priority
                     />
                   </h2>
                 </li>
@@ -343,9 +349,12 @@ export default function Home() {
                     className="sliding-text__title"
                   >
                     Underwater Wonders
-                    <img
+                    <Image
                       src="/assets/images/icon/star-icon.png"
                       alt="Star Icon"
+                      width={50}
+                      height={50}
+                      priority
                     />
                   </h2>
                 </li>
@@ -355,9 +364,12 @@ export default function Home() {
                     className="sliding-text__title"
                   >
                     Discover Marine Life
-                    <img
+                    <Image
                       src="/assets/images/icon/star-icon.png"
                       alt="Star Icon"
+                      width={50}
+                      height={50}
+                      priority
                     />
                   </h2>
                 </li>
@@ -367,9 +379,12 @@ export default function Home() {
                     className="sliding-text__title"
                   >
                     Explore the Deep
-                    <img
+                    <Image
                       src="/assets/images/icon/star-icon.png"
                       alt="Star Icon"
+                      width={50}
+                      height={50}
+                      priority
                     />
                   </h2>
                 </li>
@@ -379,9 +394,12 @@ export default function Home() {
                     className="sliding-text__title"
                   >
                     Dive into Adventure
-                    <img
+                    <Image
                       src="/assets/images/icon/star-icon.png"
                       alt="Star Icon"
+                      width={50}
+                      height={50}
+                      priority
                     />
                   </h2>
                 </li>

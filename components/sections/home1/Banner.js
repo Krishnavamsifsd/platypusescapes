@@ -46,22 +46,11 @@ const swiperOptions = {
 
 export default function Banner() {
   return (
-    <section className="main-slider relative w-full h-screen overflow-hidden">
+    <section className="creative-slider-section">
       {/* Background Video */}
-      <div
-        className="absolute top-0 left-0 w-full h-full z-0"
-        style={{
-          background:
-            "url('https://video.wixstatic.com/video/7b96ec_7d00b01b84184d6f946b3713cad198b2/720p/mp4/file.mp4') no-repeat center center",
-          backgroundSize: "cover",
-        }}
-      >
+      <div className="creative-background-video">
         <video
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
+          className="creative-background-video-element"
           src="https://video.wixstatic.com/video/7b96ec_7d00b01b84184d6f946b3713cad198b2/720p/mp4/file.mp4"
           autoPlay
           loop
@@ -71,96 +60,30 @@ export default function Banner() {
       </div>
 
       {/* Overlay */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          background:
-            "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7))",
-          zIndex: 10,
-        }}
-      ></div>
+      <div className="creative-overlay"></div>
 
       {/* Swiper */}
-      <Swiper
-        {...swiperOptions}
-        className="swiper-container relative z-20 flex items-center justify-center"
-      >
+      <Swiper {...swiperOptions} className="creative-swiper-container">
         {carouselData.map((item) => (
           <SwiperSlide key={item.id}>
-            <div
-              style={{
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%",
-                width: "100%",
-                paddingLeft: "1.5rem",
-                paddingRight: "1.5rem",
-                color: "white",
-                zIndex: 30,
-              }}
-            >
-              {/* Content */}
+            <div className="creative-swiper-slide-content">
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{
                   duration: 0.8,
                   ease: "easeInOut",
                 }}
-                className="max-w-xl space-y-6 text-center z-30"
+                className="creative-slide-text-box"
               >
                 {/* Title */}
-                <h1
-                  style={{
-                    fontSize: "3rem",
-                    fontWeight: "800",
-                    lineHeight: "1.2",
-                    background:
-                      "linear-gradient(to right, #4fd1c5, #00bcd4, #2196f3)",
-                    WebkitBackgroundClip: "text",
-                    color: "transparent",
-                    fontFamily: "'Eczar', sans-serif",
-                  }}
-                >
-                  {item.title}
-                </h1>
+                <h1 className="creative-slide-title">{item.title}</h1>
 
                 {/* Description */}
-                <p
-                  style={{
-                    fontSize: "1.25rem",
-                    fontWeight: "300",
-                    lineHeight: "1.8",
-                    color: "#B2F1F5",
-                    fontFamily: "'Eczar', sans-serif",
-                  }}
-                >
-                  {item.description}
-                </p>
+                <p className="creative-slide-description">{item.description}</p>
 
                 {/* Call to Action */}
-                <Link
-                  href="#book-now"
-                  style={{
-                    display: "inline-block",
-                    padding: "1rem 2rem",
-                    background: "linear-gradient(to right, #00bcd4, #4fd1c5)",
-                    color: "white",
-                    fontWeight: "600",
-                    fontSize: "1.125rem",
-                    borderRadius: "1rem",
-                    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-                    textDecoration: "none",
-                    transition: "all 0.3s ease-in-out",
-                  }}
-                  className="hover:bg-teal-500 focus:outline-none"
-                >
+                <Link href="#book-now" className="creative-cta-button">
                   Book Your Dive Adventure
                 </Link>
               </motion.div>

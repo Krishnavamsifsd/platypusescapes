@@ -16,7 +16,7 @@ export default function Home() {
                 </p>
                 <form
                   className="contact-form-validated contact-one__form"
-                  action="assets/inc/sendemail.php"
+                  // action="assets/inc/sendemail.php"
                   method="post"
                   noValidate
                 >
@@ -54,13 +54,26 @@ export default function Home() {
                     <div className="col-xl-6 col-lg-6">
                       <div className="contact-one__input-box">
                         <div className="select-box">
-                          <select className="selectmenu wide" defaultValue="Choose Option">
+                          <select
+                            className="selectmenu wide"
+                            defaultValue="Choose Option"
+                          >
                             <option value="Choose Option">Choose Option</option>
-                            <option value="Type Of Service 01">Type Of Service 01</option>
-                            <option value="Type Of Service 02">Type Of Service 02</option>
-                            <option value="Type Of Service 03">Type Of Service 03</option>
-                            <option value="Type Of Service 04">Type Of Service 04</option>
-                            <option value="Type Of Service 05">Type Of Service 05</option>
+                            <option value="Type Of Service 01">
+                              Type Of Service 01
+                            </option>
+                            <option value="Type Of Service 02">
+                              Type Of Service 02
+                            </option>
+                            <option value="Type Of Service 03">
+                              Type Of Service 03
+                            </option>
+                            <option value="Type Of Service 04">
+                              Type Of Service 04
+                            </option>
+                            <option value="Type Of Service 05">
+                              Type Of Service 05
+                            </option>
                           </select>
                         </div>
                       </div>
@@ -74,7 +87,7 @@ export default function Home() {
                       </div>
                       <div className="contact-one__btn-box">
                         <button
-                          type="submit"
+                          // type="submit"
                           className="thm-btn contact-one__btn"
                         >
                           Submit Now<span className="icon-arrow-right"></span>
@@ -101,8 +114,8 @@ export default function Home() {
                     </div>
                     <h3 className="contact-two__title">Location</h3>
                     <p className="contact-two__text">
-                      2972 Westheimer Rd. Santa Ana, <br />
-                      Illinois 85486
+                      Thimmapuram Beach Road, After Vizag Film Nagar Cultural
+                      Center, Visakhapatnam 530048
                     </p>
                   </div>
                 </div>
@@ -116,15 +129,15 @@ export default function Home() {
                     </div>
                     <h3 className="contact-two__title">E-mail</h3>
                     <p className="contact-two__text">
-                      <a href="mailto:tim.jennings@example.com">
-                        tim.jennings@example.com
+                      <a href="mailto:help@platypusescapes.co">
+                        help@platypusescapes.co
                       </a>
                     </p>
-                    <p className="contact-two__text">
+                    {/* <p className="contact-two__text">
                       <a href="mailto:debra.holt@example.com">
                         debra.holt@example.com
                       </a>
-                    </p>
+                    </p> */}
                   </div>
                 </div>
                 {/* Contact Two Single End */}
@@ -137,11 +150,8 @@ export default function Home() {
                     </div>
                     <h3 className="contact-two__title">Contact</h3>
                     <p className="contact-two__text">
-                      <a href="tel:019457896332">019457896332</a>,{" "}
-                      <a href="tel:017485962546">017485962546</a>
-                    </p>
-                    <p className="contact-two__text">
-                      <a href="tel:016457896333">016457896333</a>
+                      <a href="tel:019457896332">+91 76228 93711 </a>,{" "}
+                      <a href="tel:017485962546">+91 94342 61503 </a>
                     </p>
                   </div>
                 </div>

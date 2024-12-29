@@ -36,9 +36,9 @@ export default function Menu() {
           <li>
             <Link href="/team">Team</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/team-details">Team Details</Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/testimonials">Testimonials</Link>
           </li>
@@ -50,6 +50,16 @@ export default function Menu() {
           <li>
             <Link href="/faq">Faq</Link>
           </li>
+          <li>
+            <Link
+              href="https://www.platypusfoundation.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Marine conversion
+            </Link>
+          </li>
+
           {/* <li>
             <Link href="/404">404 Error</Link>
           </li> */}
